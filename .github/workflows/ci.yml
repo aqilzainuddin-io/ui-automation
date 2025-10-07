@@ -39,7 +39,6 @@ jobs:
           BROWSER: chrome
           HEADLESS: true
         run: |
-          cd ui-automation
           echo "Running tests in headless mode..."
           mvn clean test
 
