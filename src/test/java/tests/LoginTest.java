@@ -22,17 +22,18 @@ public class LoginTest {
     private String baseUrl;
 
     @BeforeClass
-    public void setUp(){       
+    public void setUp() {
+        driver = DriverFactory.initializeDriver();
+
         baseUrl = EnvReader.get("BASE_URL");
         driver.get(baseUrl + "/login");
         loginPage = new LoginPage(driver);
-        
+
         // Read from .env
         validUsername = EnvReader.get("VALID_USERNAME");
         validPassword = EnvReader.get("VALID_PASSWORD");
         invalidUsername = EnvReader.get("INVALID_USERNAME");
         invalidPassword = EnvReader.get("INVALID_PASSWORD");
-
     }
 
     @Test
