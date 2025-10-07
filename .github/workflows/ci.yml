@@ -54,5 +54,5 @@ jobs:
         with:
           name: test-reports
           path: |
-            ui-automation/target/surefire-reports/
-            ui-automation/test-output/
+            target/surefire-reports/
+            test-output/
