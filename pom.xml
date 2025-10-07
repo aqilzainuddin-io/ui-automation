@@ -5,10 +5,10 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.myproject</groupId>
-  <artifactId>qa-automation</artifactId>
+  <artifactId>ui-automation</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>qa-automation</name>
+  <name>ui-automation</name>
   <url>http://maven.apache.org</url>
 
   <dependencies>
