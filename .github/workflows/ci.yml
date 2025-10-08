@@ -31,11 +31,9 @@ jobs:
 
       - name: Run Tests
         env:
-          BASE_URL: https://the-internet.herokuapp.com
-          VALID_USERNAME: tomsmith
-          VALID_PASSWORD: SuperSecretPassword!
-          INVALID_USERNAME: wronguser
-          INVALID_PASSWORD: wrongpass
+          BASE_URL: https://opensource-demo.orangehrmlive.com/
+          VALID_USERNAME: Admin
+          VALID_PASSWORD: admin123
           BROWSER: chrome
           HEADLESS: true
         run: |
