@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.DashboardPage;
 import setup.BaseTest;
-import utils.EnvReader;
+import setup.EnvReader;
 
 public class DashboardTest extends BaseTest {
     private LoginPage loginPage;
