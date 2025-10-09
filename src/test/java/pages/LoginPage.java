@@ -24,6 +24,10 @@ public class LoginPage extends BasePage {
     }
 
     // ===== Getters =====
+    public boolean isErrorMessageVisible() {
+        return isElementDisplayed(errorMessage);
+    }
+
     public String getErrorMessage() {
         return getText(errorMessage);
     }
