@@ -2,11 +2,9 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.NoSuchElementException;
 
 
-public class DashboardPage {
-    private WebDriver driver;
+public class DashboardPage extends BasePage {
 
     // locator for something visible only when login is successful
     private By dashboardHeader = By.xpath("//h6[text()='Dashboard']");
@@ -19,76 +17,44 @@ public class DashboardPage {
     private By employeeDistributionbyLocation = By.xpath("//p[text()='Employee Distribution by Location']");
 
     public DashboardPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public boolean isDashboardDisplayed() {
-    try {
-        return driver.findElement(dashboardHeader).isDisplayed();
-    } catch (NoSuchElementException e) {
-        return false;
+        return isElementDisplayed(dashboardHeader);
     }
-}
 
     public String getDashboardTitle() {
-        return driver.findElement(dashboardHeader).getText();
+        return getText(dashboardHeader);
     }
 
     // Verify quick launch widget visible
     public boolean isQuickLaunchVisible() {
-    try {
-            return driver.findElement(quickLaunch).isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+        return isElementDisplayed(quickLaunch);
     }
 
     public boolean isTimeAtWorkVisible() {
-    try {
-            return driver.findElement(timeAtWork).isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+        return isElementDisplayed(timeAtWork);
     }
 
     public boolean isMyActionsVisible() {
-    try {
-            return driver.findElement(myActions).isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+        return isElementDisplayed(myActions);
     }
 
     public boolean isBuzzLatestPostsVisible() {
-    try {
-            return driver.findElement(buzzLatestPosts).isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+        return isElementDisplayed(buzzLatestPosts);
     }
 
     public boolean isEmployeesOnLeaveTodayVisible() {
-    try {
-            return driver.findElement(employeesOnLeaveToday).isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+        return isElementDisplayed(employeesOnLeaveToday);
     }
 
     public boolean isEmployeeDistributionBySubUnitVisible() {
-    try {
-            return driver.findElement(employeeDistributionbySubUnit).isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+        return isElementDisplayed(employeeDistributionbySubUnit);
     }
 
     public boolean isEmployeeDistributionByLocationVisible() {
-    try {
-            return driver.findElement(employeeDistributionbyLocation).isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+        return isElementDisplayed(employeeDistributionbyLocation);
     }
     
 }
