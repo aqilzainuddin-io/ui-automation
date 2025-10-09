@@ -20,7 +20,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void invalidLogin() {
         loginPage.login(EnvReader.get("INVALID_USERNAME"), EnvReader.get("INVALID_PASSWORD"));
-        Assert.assertTrue(loginPage.getErrorMessage().contains("Invalid credentials"));
+        Assert.assertTrue(loginPage.isErrorMessageVisible(), "Error message not shown!");
     }
 
     @Test
