@@ -30,8 +30,13 @@ public class DashboardTest extends BaseTest {
         // Step 3: Check important widgets
         Assert.assertTrue(dashboardPage.isQuickLaunchVisible(), "Quick Launch widget missing!");
         Assert.assertTrue(dashboardPage.isTimeAtWorkVisible(), "Time at Work widget missing!");
+        Assert.assertTrue(dashboardPage.isMyActionsVisible(), "My Actions widget missing!");
+        Assert.assertTrue(dashboardPage.isBuzzLatestPostsVisible(), "Buzz Latest Posts widget missing!");
+        Assert.assertTrue(dashboardPage.isEmployeesOnLeaveTodayVisible(), "Employees On Leave Today widget missing!");
+        Assert.assertTrue(dashboardPage.isEmployeeDistributionBySubUnitVisible(), "Employee Distribution By Unit missing!");
+        Assert.assertTrue(dashboardPage.isEmployeeDistributionByLocationVisible(), "Employee Distribution By Location widget missing!");
 
-        // Step 4: Optional title check
+        // Step 4: Title check
         System.out.println("Dashboard title: " + dashboardPage.getDashboardTitle());
     }
 }
