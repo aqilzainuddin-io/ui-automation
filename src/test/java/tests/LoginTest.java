@@ -1,9 +1,8 @@
 package tests;
 
-import pages.LoginPage;
 import setup.BaseTest;
+import pages.LoginPage;
 import setup.EnvReader;
-
 import org.testng.Assert;
 import pages.DashboardPage;
 import org.testng.annotations.Test;

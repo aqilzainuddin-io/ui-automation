@@ -1,12 +1,13 @@
 package tests;
 
-import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-import pages.LoginPage;
-import pages.DashboardPage;
 import setup.BaseTest;
+import pages.LoginPage;
 import setup.EnvReader;
+import org.testng.Assert;
+import pages.DashboardPage;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+
 
 public class DashboardTest extends BaseTest {
     private LoginPage loginPage;
