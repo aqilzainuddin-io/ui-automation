@@ -105,7 +105,7 @@ public class DashboardPage extends BasePage {
         return isElementDisplayed(maintenancePage);
     }
     public boolean isClaimPageVisible(){
-        return isElementDisplayed(maintenancePage);
+        return isElementDisplayed(claimPage);
     }
     public boolean isBuzzPageVisible(){
         return isElementDisplayed(buzzPage);
