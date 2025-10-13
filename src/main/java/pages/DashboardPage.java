@@ -16,6 +16,21 @@ public class DashboardPage extends BasePage {
     private By employeeDistributionbySubUnit = By.xpath("//p[text()='Employee Distribution by Sub Unit']");
     private By employeeDistributionbyLocation = By.xpath("//p[text()='Employee Distribution by Location']");
 
+    // locator for all page in navigation bar
+    private By adminPage = By.xpath("//span[text()='Admin']");
+    private By pimPage = By.xpath("//span[text()='PIM']");
+    private By leavePage = By.xpath("//span[text()='Leave']");
+    private By timePage = By.xpath("//span[text()='Time']");
+    private By recruitmentPage = By.xpath("//span[text()='Recruitment']");
+    private By myInfoPage = By.xpath("//span[text()='My Info']");
+    private By performancePage = By.xpath("//span[text()='Performance']");
+    private By dashboardPage = By.xpath("//span[text()='Dashboard']");
+    private By directoryPage = By.xpath("//span[text()='Directory']");
+    private By maintenancePage = By.xpath("//span[text()='Maintenance']");
+    private By claimPage = By.xpath("//span[text()='Claim']");
+    private By buzzPage = By.xpath("//span[text()='Buzz']");
+
+
     public DashboardPage(WebDriver driver) {
         super(driver);
     }
@@ -56,5 +71,43 @@ public class DashboardPage extends BasePage {
     public boolean isEmployeeDistributionByLocationVisible() {
         return isElementDisplayed(employeeDistributionbyLocation);
     }
-    
+
+
+    // verify all navigation link visible
+    public boolean isAdminPageVisible(){
+        return isElementDisplayed(adminPage);
+    }
+    public boolean isPIMPageVisible(){
+        return isElementDisplayed(pimPage);
+    }
+    public boolean isLeavePageVisible(){
+        return isElementDisplayed(leavePage);
+    }
+    public boolean isTimePageVisible(){
+        return isElementDisplayed(timePage);
+    }
+    public boolean isRecruitmentPageVisible(){
+        return isElementDisplayed(recruitmentPage);
+    }
+    public boolean isMyInfoPageVisible(){
+        return isElementDisplayed(myInfoPage);
+    }
+    public boolean isPerformancePageVisible(){
+        return isElementDisplayed(performancePage);
+    }
+    public boolean isDashboardPageVisible(){
+        return isElementDisplayed(dashboardPage);
+    }
+    public boolean isDirectoryPageVisible(){
+        return isElementDisplayed(directoryPage);
+    }
+    public boolean isMaintenancePageVisible(){
+        return isElementDisplayed(maintenancePage);
+    }
+    public boolean isClaimPageVisible(){
+        return isElementDisplayed(maintenancePage);
+    }
+    public boolean isBuzzPageVisible(){
+        return isElementDisplayed(buzzPage);
+    }
 }
