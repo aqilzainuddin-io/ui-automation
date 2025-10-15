@@ -30,11 +30,12 @@ public class DashboardPage extends BasePage {
     private By claimPage = By.xpath("//span[text()='Claim']");
     private By buzzPage = By.xpath("//span[text()='Buzz']");
 
-
+    // constructor
     public DashboardPage(WebDriver driver) {
         super(driver);
     }
 
+    // getter method
     public boolean isDashboardDisplayed() {
         return isElementDisplayed(dashboardHeader);
     }
@@ -43,7 +44,6 @@ public class DashboardPage extends BasePage {
         return getText(dashboardHeader);
     }
 
-    // Verify quick launch widget visible
     public boolean isQuickLaunchVisible() {
         return isElementDisplayed(quickLaunch);
     }
@@ -72,8 +72,7 @@ public class DashboardPage extends BasePage {
         return isElementDisplayed(employeeDistributionbyLocation);
     }
 
-
-    // verify all navigation link visible
+    // getter method 
     public boolean isAdminPageVisible(){
         return isElementDisplayed(adminPage);
     }
