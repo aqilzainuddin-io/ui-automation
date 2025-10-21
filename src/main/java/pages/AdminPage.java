@@ -3,9 +3,6 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.github.dockerjava.core.dockerfile.DockerfileStatement.Add;
-import com.google.common.collect.Table;
-
 public class AdminPage extends BasePage {
     
     // verify admin/user management page
@@ -34,6 +31,5 @@ public class AdminPage extends BasePage {
     public AdminPage(WebDriver driver) {
         super(driver);
     }
-
 
 }
