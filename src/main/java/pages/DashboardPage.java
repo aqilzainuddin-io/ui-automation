@@ -36,7 +36,7 @@ public class DashboardPage extends BasePage {
     }
 
     // getter method
-    public boolean isDashboardDisplayed() {
+    public boolean isDashboardHeaderDisplayed() {
         return isElementDisplayed(dashboardHeader);
     }
 
@@ -108,5 +108,9 @@ public class DashboardPage extends BasePage {
     }
     public boolean isBuzzPageVisible(){
         return isElementDisplayed(buzzPage);
+    }
+
+    public void clickAdminPage(){
+        click(adminPage);
     }
 }
