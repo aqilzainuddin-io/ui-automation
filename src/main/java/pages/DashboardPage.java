@@ -35,7 +35,7 @@ public class DashboardPage extends BasePage {
         super(driver);
     }
 
-    // getter method
+    // method
     public boolean isDashboardHeaderDisplayed() {
         return isElementDisplayed(dashboardHeader);
     }
@@ -72,7 +72,7 @@ public class DashboardPage extends BasePage {
         return isElementDisplayed(employeeDistributionbyLocation);
     }
 
-    // getter method 
+    // method 
     public boolean isAdminPageVisible(){
         return isElementDisplayed(adminPage);
     }
