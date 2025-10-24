@@ -27,6 +27,6 @@ public class LoginTest extends BaseTest {
     public void validLogin() {
         loginPage.login(EnvReader.get("VALID_USERNAME"), EnvReader.get("VALID_PASSWORD"));
         DashboardPage dashboardPage = new DashboardPage(driver);
-        Assert.assertTrue(dashboardPage.isDashboardDisplayed(), "Dashboard not visible after valid login!");
+        Assert.assertTrue(dashboardPage.isDashboardHeaderDisplayed(), "Dashboard not visible after valid login!");
     }
 }
