@@ -14,4 +14,4 @@ target/
 Thumbs.db
 
 # Md files
-.manual-steps
+manual-steps.md
