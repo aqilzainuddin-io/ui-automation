@@ -35,8 +35,8 @@ public class AddEmpPage extends BasePage {
     private By inputConfirmPassword = By.xpath("//label[normalize-space(text())='Confirm Password']/../following-sibling::div/input");
     
     //locators-button
-    private By saveBtn = By.xpath("//button[normalize-space()='Cancel']");
-    private By cancelBtn = By.xpath("//button[normalize-space()='Save']");
+    private By saveBtn = By.xpath("//button[normalize-space()='Save']");
+    private By cancelBtn = By.xpath("//button[normalize-space()='Cancel']");
 
     //------------Normal Method (Label)------------//
     public boolean isHeaderDisplayed(){
