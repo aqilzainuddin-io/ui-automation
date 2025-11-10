@@ -59,6 +59,9 @@ public class BasePage {
      * and types the given input string.
      */
     public void type(By locator, String text) {
+        if (text == null) {
+            text = "";  // Replace null with empty string
+        }
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         element.clear();
         element.sendKeys(text);
