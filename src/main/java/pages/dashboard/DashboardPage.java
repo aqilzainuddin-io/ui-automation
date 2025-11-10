@@ -1,7 +1,9 @@
-package pages;
+package pages.dashboard;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import pages.BasePage;
 
 
 public class DashboardPage extends BasePage {
@@ -112,5 +114,12 @@ public class DashboardPage extends BasePage {
 
     public void clickAdminPage(){
         click(adminPage);
+    }
+    public void clickPIMPage(){
+        if(!isElementDisplayed(pimPage)){
+            System.out.println("PIM navigation link not visible!");
+        }
+        click(pimPage);
+        System.out.println("PIM navigation link clicked");
     }
 }

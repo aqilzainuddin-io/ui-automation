@@ -1,7 +1,9 @@
-package pages;
+package pages.admin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import pages.BasePage;
 
 public class AddUserPage extends BasePage {
     
