@@ -17,44 +17,44 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage(driver);
     }
 
-    @Test
+    @Test(groups = {"regression"})
     public void emptyUsernamePasswordLogin(){
         loginPage.login(EnvReader.get(""),EnvReader.get(""));
         Assert.assertTrue(loginPage.isUsernameReqErrMsgVisible(),"Error message not displayed!");
         Assert.assertTrue(loginPage.isPasswordReqErrMsgVisible(),"Error message not displayed!");
     }
 
-    @Test 
+    @Test(groups = {"regression"})
     public void emptyPasswordLogin(){
         loginPage.login(EnvReader.get("VALID_USERNAME"), EnvReader.get(""));
         Assert.assertTrue(loginPage.isPasswordReqErrMsgVisible(),"Error message not displayed!");
     }
 
-    @Test
+    @Test(groups = {"regression"})
     public void emptyUsernameLogin(){
         loginPage.login(EnvReader.get(""), EnvReader.get("VALID_PASSWORD"));
         Assert.assertTrue(loginPage.isUsernameReqErrMsgVisible(),"Error message not displayed!");
     }
 
-    @Test
+    @Test(groups = {"sanity","smoke"})
     public void invalidLogin() {
         loginPage.login(EnvReader.get("INVALID_USERNAME"), EnvReader.get("INVALID_PASSWORD"));
         Assert.assertTrue(loginPage.isInvalidCredErrMsgVisible(), "Error message not displayed!");
     }
 
-    @Test
+    @Test(groups = {"sanity","smoke"})
     public void invalidUsernameLogin(){
         loginPage.login(EnvReader.get("INVALID_USERNAME"), EnvReader.get("VALID_PASSWORD"));
         Assert.assertTrue(loginPage.isInvalidCredErrMsgVisible(), "Error message not displayed!");
     }
 
-    @Test
+    @Test(groups = {"sanity","smoke"})
     public void invalidPasswordLogin(){
         loginPage.login(EnvReader.get("VALID_USERNAME"), EnvReader.get("INVALID_PASSWORD"));
         Assert.assertTrue(loginPage.isInvalidCredErrMsgVisible(), "Error message not displayed!");
     }
 
-    @Test
+    @Test(groups = {"sanity","smoke"})
     public void validLogin() {
         loginPage.login(EnvReader.get("VALID_USERNAME"), EnvReader.get("VALID_PASSWORD"));
         DashboardPage dashboardPage = new DashboardPage(driver);
