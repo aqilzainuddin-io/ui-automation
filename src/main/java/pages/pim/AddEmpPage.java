@@ -80,7 +80,7 @@ public class AddEmpPage extends BasePage {
         return waitForElementVisible(confirmPassword, 10).isDisplayed();
     }
     public boolean isSuccessfullySavedMsgVisible(){
-        return waitForElementVisible(successfullySavedMsg, 10).isDisplayed();
+        return waitForElementVisible(successfullySavedMsg, 30).isDisplayed();
     }
 
     //------------Action Method (Input)------------//
