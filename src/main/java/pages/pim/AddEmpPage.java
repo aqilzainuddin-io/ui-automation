@@ -1,7 +1,12 @@
 package pages.pim;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pages.BasePage;
 
@@ -38,36 +43,47 @@ public class AddEmpPage extends BasePage {
     private By saveBtn = By.xpath("//button[normalize-space()='Save']");
     private By cancelBtn = By.xpath("//button[normalize-space()='Cancel']");
 
-    //------------Normal Method (Label)------------//
-    public boolean isHeaderDisplayed(){
-        return isElementDisplayed(header);
-    }
-    public boolean isPageTitleVisible(){
-        return isElementDisplayed(pageTitle);
-    }
-    public boolean isEmpFullNameVisible(){
-        return isElementDisplayed(empFullName);
-    }
-    public boolean isEmpIDVisible(){
-        return isElementDisplayed(empID);
-    }
-    public boolean isCreateLoginDetailsVisible(){
-        return isElementDisplayed(createLoginDetails);
-    }
-    public boolean isUsernameVisible(){
-        return isElementDisplayed(username);
-    }
-    public boolean isStatusVisible(){
-        return isElementDisplayed(status);
-    }
-    public boolean isPasswordVisible(){
-        return isElementDisplayed(password);
-    }
-    public boolean isConfirmPasswordVisible(){
-        return isElementDisplayed(confirmPassword);
+    //locators-message
+    private By successfullySavedMsg = By.xpath("//div/p[contains(normalize-space(),'Successfully Saved')]");
+
+    //-----------wait for element method-----------//
+    private WebElement waitForElementVisible(By locator, int timeoutInSeconds) {
+        return new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds)).until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    //------------Normal Method (Input)------------//
+    //------------Getter Method (Label)------------//
+    public boolean isHeaderDisplayed(){
+        return waitForElementVisible(header, 10).isDisplayed();
+    }
+    public boolean isPageTitleVisible(){
+        return waitForElementVisible(pageTitle, 10).isDisplayed();
+    }
+    public boolean isEmpFullNameVisible(){
+        return waitForElementVisible(empFullName, 10).isDisplayed();
+    }
+    public boolean isEmpIDVisible(){
+        return waitForElementVisible(empID, 10).isDisplayed();
+    }
+    public boolean isCreateLoginDetailsVisible(){
+        return waitForElementVisible(createLoginDetails, 10).isDisplayed();
+    }
+    public boolean isUsernameVisible(){
+        return waitForElementVisible(username, 10).isDisplayed();
+    }
+    public boolean isStatusVisible(){
+        return waitForElementVisible(status, 10).isDisplayed();
+    }
+    public boolean isPasswordVisible(){
+        return waitForElementVisible(password, 10).isDisplayed();
+    }
+    public boolean isConfirmPasswordVisible(){
+        return waitForElementVisible(confirmPassword, 10).isDisplayed();
+    }
+    public boolean isSuccessfullySavedMsgVisible(){
+        return waitForElementVisible(successfullySavedMsg, 10).isDisplayed();
+    }
+
+    //------------Action Method (Input)------------//
     public void inputEmpFirstName(String empfirstname){
         if(!isElementDisplayed(empFirstName)){
             System.out.println("Employee First Name input not visible!");
