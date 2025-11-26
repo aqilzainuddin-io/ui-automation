@@ -48,15 +48,15 @@ public class AddEmpTest extends BaseTest {
         Assert.assertTrue(addEmpPage.isPasswordVisible(),"Password not displayed!");
         Assert.assertTrue(addEmpPage.isConfirmPasswordVisible(),"Confirm password is not displayed!");
 
-        addEmpPage.inputEmpFirstName("John");
+        addEmpPage.inputEmpFirstName("John52");
         addEmpPage.inputEmpLastName("Doe");
-        addEmpPage.inputEmpID("52458");
+        addEmpPage.inputEmpID("8989");
         addEmpPage.inputUsername("JohnDoe52");
         addEmpPage.clickStatusEnable();
-        addEmpPage.inputPassword("JDoe52");
-        addEmpPage.inputConfirmPassword("JDoe52");
+        addEmpPage.inputPassword("JDoe5245");
+        addEmpPage.inputConfirmPassword("JDoe5245");
         addEmpPage.clickSaveBtn();
 
-
+        Assert.assertTrue(addEmpPage.isSuccessfullySavedMsgVisible(),"Successfully saved message not displayed!");
     }
 }
