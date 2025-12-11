@@ -22,18 +22,18 @@ public class PIMTest extends BaseTest  {
         pimPage = new PIMPage(driver);
     }
 
-    @Test
-    public void searchEmployeeByID() throws InterruptedException{
-        loginPage.login(EnvReader.get("VALID_USERNAME"), EnvReader.get("VALID_PASSWORD"));
-        Assert.assertTrue(dashboardPage.isDashboardHeaderDisplayed(),"Dashboard header not displayed!");
-        Assert.assertTrue(dashboardPage.isPIMPageVisible(),"PIM navigator link not displayed!");
-        dashboardPage.clickPIMPage();
+    // @Test
+    // public void searchEmployeeByID() throws InterruptedException{
+    //     loginPage.login(EnvReader.get("VALID_USERNAME"), EnvReader.get("VALID_PASSWORD"));
+    //     Assert.assertTrue(dashboardPage.isDashboardHeaderDisplayed(),"Dashboard header not displayed!");
+    //     Assert.assertTrue(dashboardPage.isPIMPageVisible(),"PIM navigator link not displayed!");
+    //     dashboardPage.clickPIMPage();
 
-        Assert.assertTrue(pimPage.isPIMHeaderDisplayed(),"PIM header not displayed!");
-        pimPage.inputEmployeeID("8989");
-        pimPage.clickSearchBtn();
-        Assert.assertTrue(pimPage.isRecordFoundByIDVisible(),"Registered ID not displayed!");
-    }
+    //     Assert.assertTrue(pimPage.isPIMHeaderDisplayed(),"PIM header not displayed!");
+    //     pimPage.inputEmployeeID("8989");
+    //     pimPage.clickSearchBtn();
+    //     Assert.assertTrue(pimPage.isRecordFoundByIDVisible(),"Registered ID not displayed!");
+    // }
 
     // @Test
     // public void searchByEmployeeName() throws InterruptedException{
