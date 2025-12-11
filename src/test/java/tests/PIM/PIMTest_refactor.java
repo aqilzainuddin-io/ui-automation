@@ -10,7 +10,7 @@ import pages.dashboard.DashboardPage;
 import pages.login.LoginPage;
 import pages.pim.PIMPage;
 
-public class PIMTest extends BaseTest  {
+public class PIMTest_refactor extends BaseTest  {
     private LoginPage loginPage;
     private DashboardPage dashboardPage;
     private PIMPage pimPage;
