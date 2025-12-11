@@ -53,6 +53,10 @@ public class PIMPage extends BasePage {
     private By resetBtn = By.xpath("//button[normalize-space()='Reset']");
     private By addBtn = By.xpath("//button[normalize-space()='Add']");
 
+    private By recordFoundTitle = By.xpath("//span[contains(normalize-space(),'Record Found')]");
+    private By recordFoundByID = By.xpath("//div[text()='8989']");
+    private By recordFoundByFirstLastName = By.xpath("//div[contains(@class, 'oxd-table-row') and .//div[normalize-space(text())='John52'] and .//div[normalize-space(text())='Doe']]");
+    
 
     //------------Normal Method (Label)------------//
     public boolean isPIMHeaderDisplayed(){
@@ -82,7 +86,16 @@ public class PIMPage extends BasePage {
     public boolean isSubUnitVisible(){
         return isElementDisplayed(subUnit);
     }
-
+    public boolean isRecordFoundTitleVisible(){
+        return isElementDisplayed(recordFoundTitle);
+    }
+    public boolean isRecordFoundByIDVisible(){
+        return isElementDisplayed(recordFoundByID);
+    }
+    public boolean isRecordFoundByFirstLastNameVisible(){
+        return isElementDisplayed(recordFoundByFirstLastName);
+    }
+    
 
     //------------Normal Method (Input)------------//
     public void inputEmployeeName(String empname){
